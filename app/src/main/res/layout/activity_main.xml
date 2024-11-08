@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- Toolbar -->
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="#006400"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+        android:title="Time Calculator"
+        android:subtitle="Add and Subtract Time"/>
+
+    <!-- Input fields -->
+    <EditText
+        android:id="@+id/inputTime1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Enter time (e.g., 1h23m32s)"
+        android:layout_below="@id/toolbar"
+        android:inputType="text"/>
+
+    <EditText
+        android:id="@+id/inputTime2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Enter time (e.g., 1m44s)"
+        android:layout_below="@id/inputTime1"
+        android:inputType="text"/>
+
+    <!-- Buttons -->
+    <Button
+        android:id="@+id/addButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Add"
+        android:backgroundTint="#008000"
+        android:layout_below="@id/inputTime2"/>
+
+    <Button
+        android:id="@+id/subtractButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Subtract"
+        android:backgroundTint="#008000"
+        android:layout_toEndOf="@id/addButton"
+        android:layout_alignTop="@id/addButton"/>
+
+    <!-- Result field -->
+    <TextView
+        android:id="@+id/resultTextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="#000000"
+        android:textSize="18sp"
+        android:layout_below="@id/addButton"/>
+
+    <!-- Clear Button -->
+    <Button
+        android:id="@+id/clearButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Clear"
+        android:backgroundTint="#008000"
+        android:layout_below="@id/resultTextView"/>
+
+</RelativeLayout>
